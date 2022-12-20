@@ -39,6 +39,22 @@
             "descripcion": "Lacteos y cosas varias dfsgsdfgsdfg",
             "precio": 3.10,
             "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671447042/cafeInes/batidos/batido_mango_u5xniz.jpg" 
+        },
+        {
+            "id": 6,
+            "titulo":"Tartita",
+            "categoria": "Postres",
+            "descripcion": "Lacteos y cosillas",
+            "precio": 3.40,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/tarta_queso_lmxd7f.png" 
+        },
+        {
+            "id": 7,
+            "titulo":"Tartota",
+            "categoria": "Postres",
+            "descripcion": "Lacteos y cosillas",
+            "precio": 3.40,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/tarta_queso_lmxd7f.png" 
         }
     ]
 }

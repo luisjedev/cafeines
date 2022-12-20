@@ -1,8 +1,6 @@
 import ListaCategorias from "./components/ListaCategorias";
 import ListaProductos from "./components/ListaProductos";
-
 import { Link, Route, Routes } from "react-router-dom";
-import FichaProducto from "./components/FichaProducto";
 
 
 function App() {
@@ -13,14 +11,13 @@ function App() {
         <Routes>
           <Route path='/' element={<ListaCategorias/>}/>
           <Route path='/:categoria' element={<ListaProductos/>} />
-          <Route path='/:categoria/:id' element={<FichaProducto/>}/>
+          {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
       </div>
       <div>
         <nav>
           <ul>
             <li><Link to='/'>Categorias</Link></li>
-            {/* <li><Link to='/'>Productos</Link></li> */}
           </ul>
         </nav>
       </div>
