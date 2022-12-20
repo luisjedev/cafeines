@@ -2,8 +2,8 @@
 const Titulo = ({titulo}) => {
 
     return(
-        <div className="flex justify-center items-center">
-            <h4 className="font-bold">{titulo}</h4>
+        <div className="w-full flex justify-center items-center mt-2">
+            <h2 className="text-amber-900 text-center">{titulo}</h2>
         </div>
     )
 }

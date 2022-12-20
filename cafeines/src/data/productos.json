@@ -1,0 +1,44 @@
+{
+    "lista_productos" : [
+        {
+            "id": 1,
+            "titulo":"Gofre",
+            "categoria": "Postres",
+            "descripcion": "Gluten y lacteos",
+            "precio": 5.50,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/gofre_czu5mh.png"
+        },
+        {
+            "id": 2,
+            "titulo":"Tarta",
+            "categoria": "Postres",
+            "descripcion": "Lacteos y cosillas",
+            "precio": 3.40,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/tarta_queso_lmxd7f.png" 
+        },
+        {
+            "id": 3,
+            "titulo":"Tostada Mario",
+            "categoria": "Tostadas",
+            "descripcion": "Gluten y lacteos",
+            "precio": 4,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/tostadas/tostada1_jthpne.png" 
+        },
+        {
+            "id": 4,
+            "titulo":"Tostada LuisG",
+            "categoria": "Tostadas",
+            "descripcion": "Lacteos y cosas variassdfgsdfgsdfgsdfgsdfgsdfdfgsdfgsdf",
+            "precio": 5.10,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/tostadas/tostada2_tkwybd.png" 
+        },
+        {
+            "id": 5,
+            "titulo":"Mango",
+            "categoria": "Batidos",
+            "descripcion": "Lacteos y cosas varias dfsgsdfgsdfg",
+            "precio": 3.10,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671447042/cafeInes/batidos/batido_mango_u5xniz.jpg" 
+        }
+    ]
+}
