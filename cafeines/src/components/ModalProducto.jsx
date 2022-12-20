@@ -69,11 +69,11 @@ const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
                 <div className="w-full flex justify-center">
                     <img src={data.url} className="w-full" />
                 </div>
-                <h2 className="mt-2 mb-2">{data.titulo}</h2>
+                <h2 className="mt-2">{data.titulo}</h2>
                 <div className='w-[90%] h-auto'>
-                    <p className="w-full h-full mb-5 p-2 text-amber-900">{data.descripcion}</p>
+                    <p className="w-full h-full mb-2 p-2 text-amber-900">{data.descripcion}</p>
                 </div>
-                <h2 className="text-xl mb-2">{`${data.precio.toFixed(2)} €`}</h2>
+                <h2 className="text-xl mb-5">{`${data.precio.toFixed(2)} €`}</h2>
             </div>
       </Modal>
     </div>
