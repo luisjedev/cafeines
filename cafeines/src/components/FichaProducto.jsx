@@ -15,6 +15,7 @@ const FichaProducto = () => {
                 <h2 className="mt-2 mb-2">{producto.titulo}</h2>
                 <p className="mb-5">{producto.descripcion}</p>
                 <h2 className="text-xl mb-2">{`${producto.precio.toFixed(2)} €`}</h2>
+                
             </div>
     )
 }

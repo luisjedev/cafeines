@@ -2,21 +2,26 @@ import ListaProductos from '../data/productos.json'
 
 class ServicioProductos{
 
+    
     getListaProductos(){
         return ListaProductos.lista_productos
     }
-
+    
     getProductosPorCategoria(categoria){
         return ListaProductos?.lista_productos
         .filter((producto) => producto.categoria === categoria)
     }
-
+    
     getProductoPorID(id){
         return ListaProductos?.lista_productos.find((producto) =>{
             if(producto.id === id){
                 return producto;
             }
         })
+    }
+    
+    getAlergias(id){
+       return this.getProductoPorID(id).alergias
     }
 
     getCategorias(){

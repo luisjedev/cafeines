@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import Modal from 'react-modal';
+import ListaAlergias from './elements/ListaAlergias';
 
 
 const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
     
   Modal.setAppElement('#root');
-  let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   useEffect(() =>{
@@ -16,10 +16,6 @@ const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
     }
 
   },[mostrarModal])
-
-  function openModal() {
-    setIsOpen(true);
-  }
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
@@ -72,6 +68,16 @@ const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
                 <h2 className="mt-2">{data.titulo}</h2>
                 <div className='w-[90%] h-auto'>
                     <p className="w-full h-full mb-2 p-2 text-amber-900">{data.descripcion}</p>
+                </div>
+                <div className="mb-5 flex justify-center items-center">
+                  <h2 className='text-2xl mr-2'>Alergias: </h2>
+                  {data.alergias ?
+                    <div>
+                      <ListaAlergias data={data}/>
+                    </div>
+                  :
+                    <p className='pt-1'>Ninguna</p>
+                  }
                 </div>
                 <h2 className="text-xl mb-5">{`${data.precio.toFixed(2)} €`}</h2>
             </div>
