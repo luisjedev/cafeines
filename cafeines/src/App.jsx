@@ -1,6 +1,6 @@
 import ListaCategorias from "./components/ListaCategorias";
 import ListaProductos from "./components/ListaProductos";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -13,13 +13,6 @@ function App() {
           <Route path='/:categoria' element={<ListaProductos/>} />
           {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to='/'>Categorias</Link></li>
-          </ul>
-        </nav>
       </div>
     </div>
   )
