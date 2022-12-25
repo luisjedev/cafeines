@@ -5,7 +5,9 @@ import App from './App'
 import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <React.Suspense>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.Suspense>
 )
