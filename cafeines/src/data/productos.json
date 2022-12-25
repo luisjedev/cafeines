@@ -42,11 +42,11 @@
         },
         {
             "id": 6,
-            "titulo":"Tartita",
+            "titulo":"Tortitas",
             "categoria": "Postres",
             "descripcion": "Lacteos y cosillas",
             "precio": 3.40,
-            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/tarta_queso_lmxd7f.png" 
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671968405/cafeInes/postres/tortitas_mijzhy.jpg" 
         },
         {
             "id": 7,
@@ -54,7 +54,15 @@
             "categoria": "Postres",
             "descripcion": "Lacteos y cosillas",
             "precio": 3.40,
-            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671440092/cafeInes/postres/tarta_queso_lmxd7f.png" 
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671968405/cafeInes/postres/donuts_f9wxem.jpg" 
+        },
+        {
+            "id": 8,
+            "titulo":"Melocotón",
+            "categoria": "Batidos",
+            "descripcion": "Lacteos y cosas varias dfsgsdfgsdfg",
+            "precio": 3.10,
+            "url": "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671968515/cafeInes/batidos/melocoton_saoyjx.jpg" 
         }
     ]
 }
