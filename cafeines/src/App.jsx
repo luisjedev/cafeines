@@ -1,9 +1,11 @@
 import ListaCategorias from "./components/ListaCategorias";
 import ListaProductos from "./components/ListaProductos";
 import { Route, Routes } from "react-router-dom";
-
+import { getAllProducts } from "./services/productService";
 
 function App() {
+
+  getAllProducts();
 
   return (
     <div className="flex flex-col justify-center items-center bg-gray-50">
