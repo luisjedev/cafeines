@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { client } from "../supabase/client";
+import { supabase } from "../supabase/client";
 
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
     console.log(`${email}, ${password}`)
     
     try {
-      const result = await client.auth.signInWithPassword({
+      const result = await supabase.auth.signInWithPassword({
         email: email,
         password: password,
       })

@@ -1,12 +1,16 @@
 import ListaCategorias from "./components/ListaCategorias";
 import ListaProductos from "./components/ListaProductos";
 import { Route, Routes } from "react-router-dom";
-import { getAllProducts } from "./services/productService";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import { useProducts } from "./context/ProductsContext";
 
 function App() {
 
-  getAllProducts();
+  //getAllProducts()
+
+  const {listaProductos} = useProducts();
+  console.log(listaProductos)
 
   return (
     <div className="flex flex-col justify-center items-center bg-gray-50">
@@ -15,6 +19,7 @@ function App() {
           <Route path='/' element={<ListaCategorias/>}/>
           <Route path='/:categoria' element={<ListaProductos/>} />
           <Route path='/administracion' element={<Login/>} />
+          <Route path='*' element={<NotFound/>} />
           {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
       </div>

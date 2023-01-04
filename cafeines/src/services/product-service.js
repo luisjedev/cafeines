@@ -1,7 +1,6 @@
 import ListaProductos from '../data/productos.json'
 
 class ServicioProductos{
-
     
     getListaProductos(){
         return ListaProductos.lista_productos
