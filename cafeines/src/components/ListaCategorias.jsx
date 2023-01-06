@@ -1,16 +1,19 @@
 import SelectorCategoria from "./SelectorCategoria"
-import ServicioProductos from "../services/product-service"
+import useSupabase from "../Hooks/useSupabase";
+import { getAllProducts } from "../api/supa-service";
 
 const  ListaCategorias = () => {
 
-    const productService = new ServicioProductos();
+    const { loading, data, error } = useSupabase(getAllProducts);
+    console.log(data)
+    
 
     return(
         <div className="grid grid-cols-1 w-full">
-        {productService.getCategorias().map((categoria) => (
+        {/* {getCategorias(data).map((categoria) => (
             <SelectorCategoria key={categoria.titulo} data={categoria}/>
             ))
-        }
+        } */}
         </div>
     )
 }
