@@ -3,14 +3,14 @@ import ListaProductos from "./components/ListaProductos";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import { useProducts } from "./context/ProductsContext";
+import useSupabase from "./Hooks/useSupabase";
+import { getAllProducts } from "./services/supa-service";
 
 function App() {
 
-  //getAllProducts()
+  const { loading, data, error } = useSupabase(getAllProducts);
 
-  const {listaProductos} = useProducts();
-  console.log(listaProductos)
+  console.log(data)
 
   return (
     <div className="flex flex-col justify-center items-center bg-gray-50">
