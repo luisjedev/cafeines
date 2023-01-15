@@ -5,8 +5,8 @@ import { getAllProducts } from "../api/supa-service";
 const  ListaCategorias = () => {
 
     const { loading, data, error } = useSupabase(getAllProducts);
-    console.log(data)
-    
+    console.log("Todos los productos:");
+    console.log(data);
 
     return(
         <div className="grid grid-cols-1 w-full">
