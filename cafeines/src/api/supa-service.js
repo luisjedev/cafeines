@@ -6,6 +6,20 @@ export const getAllProducts = async () => {
   };
 
 
+export const getProductsOfCategory = async () => {
+    let { data, error } = await supabase.from("productos").select("*").eq("categoria", "Cafés");
+    return { data, error };
+}
+
+export const getCategories = async () => {
+    let { data, error } = await supabase.from("categorias").select("*");
+    return { data, error};
+}
+
+export const getAlergias = async () => {
+    let { data, error } = await supabase.from("alergenos").select("*");
+    return { data, error };
+}
 
 //PASAR ESTAS FUNCIONES A LLAMADAS ESPECÍFICAS
 
@@ -28,7 +42,7 @@ export const getProductoPorID = (listaProductos, id) => {
     })
 }
 
-export const getAlergias = (id) => {
+export const getAlergiasOld = (id) => {
    return getProductoPorID(id).alergias
 }
 
