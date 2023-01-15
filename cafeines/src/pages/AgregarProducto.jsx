@@ -60,8 +60,8 @@ const AgregarProducto = () => {
                 <h2 className="mb-2 text-2xl">Alergias</h2>
                 <div className="grid grid-cols-2 mb-5 w-full text-center">
                     {alergias.data?.map((alergia) => (
-                        <div key={alergia.id} className="flex items-center justify-center p-1 m-0 mb-2 h-auto w-auto">
-                            <label className="text-center p-0 m-0 truncate pr-5 w-full h-full">{alergia.name}</label>
+                        <div key={alergia.id} className="flex items-center justify-around p-1 m-0 mb-2 h-auto w-[10rem]">
+                            <label className="truncate w-[5rem]">{alergia.name}</label>
                             <input type="checkbox" defaultValue="false" className="accent-amber-900 h-[40px] w-[40px]"/>
                         </div>
                     ))}
