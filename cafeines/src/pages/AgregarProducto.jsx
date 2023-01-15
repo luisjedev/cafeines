@@ -46,13 +46,13 @@ const AgregarProducto = () => {
                 name="descripcion"
                 onChange={e => setPassword(e.target.value)}
                 />
-                <input className="border-amber-900 border-2 mb-5 p-1 text-center w-[80%]"
+                <input className="border-amber-900 border-2 mb-3 p-1 text-center w-[80%]"
                 placeholder="Precio.."
                 type="number" 
                 name="precio"
                 />
                 <h2 className="mb-2 text-2xl">Categoría</h2>
-                <select className="border-amber-900 border-2 mb-5 p-1 text-center w-[80%] ">
+                <select className="border-amber-900 border-2 mb-3 p-1 text-center w-[80%] ">
                     {categorias.data?.map((categoria) => (
                         <option key={categoria.id} value={categoria.name}>{categoria.name}</option>
                     ))}
