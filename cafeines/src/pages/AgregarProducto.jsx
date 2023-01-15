@@ -32,7 +32,7 @@ const AgregarProducto = () => {
 
     return(
         <div className="w-full text-center">
-            <h2 className="mb-5">Nuevo producto</h2>
+            <h2 className="mb-3">Nuevo producto</h2>
             <form onSubmit={handleSubmit} className="w-full p-2 flex justify-center items-center flex-col">
                 <input className="border-amber-900 border-2 mb-2 p-1 text-center w-[80%]" 
                 placeholder="Nombre.."
