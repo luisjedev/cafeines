@@ -21,6 +21,16 @@ export const getAlergias = async () => {
     return { data, error };
 }
 
+export const insertProduct = async (values) =>{
+    const { error } = await supabase
+    .from("productos")
+    .insert(values);
+
+    if(!error){
+        alert("Producto añadido correctamente")
+    }
+}
+
 //PASAR ESTAS FUNCIONES A LLAMADAS ESPECÍFICAS
 
   

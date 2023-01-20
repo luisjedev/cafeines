@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { supabase } from "../lib/supaBase";
-
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -17,6 +18,7 @@ const Login = () => {
         password: password,
       })
       console.log(result)
+      navigate("/nuevo_producto");
     } catch (error) {
       console.error(error)
     }
