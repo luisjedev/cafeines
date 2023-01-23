@@ -1,30 +1,19 @@
+import useSupabase from "../../Hooks/useSupabase";
+import { getAlergias } from "../../api/supa-service";
 
+const ListaAlergias = ({alergias}) => {
 
-const ListaAlergias = ({data}) => {
-
-    const ALERGIAS = {
-        gluten : "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671972037/cafeInes/alergias/gluten_uxluwj.png",
-        lacteos : "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671972037/cafeInes/alergias/lacteos_a22grm.png",
-        frutos_secos : "https://res.cloudinary.com/dal8nbv6k/image/upload/v1671972037/cafeInes/alergias/frutos_secos_dmgvkg.png"
-    }
+    const {loading, data, error} = useSupabase(getAlergias);
+    console.log(data)
 
     return (
         <div className="flex justify-center items-center">
-            {data.alergias.includes("gluten") &&
-                <div className="ml-2 mr-1">
-                    <img src={ALERGIAS.gluten}/>
+            {data?.map((alergia) => (
+                alergias.includes(alergia.name) &&
+                <div key={alergia.id} className="ml-2 mr-1">
+                    <img src={alergia.url} className="w-[40px]"/>
                 </div>
-            }
-            {data.alergias.includes("lacteos") &&
-                <div className="ml-2 mr-1">
-                    <img src={ALERGIAS.lacteos}/>
-                </div>
-            }
-            {data.alergias.includes("frutos_secos") &&
-                <div className="ml-2 mr-1">
-                    <img src={ALERGIAS.frutos_secos}/>
-                </div>
-            }
+            ))}
         </div>
     )
 }

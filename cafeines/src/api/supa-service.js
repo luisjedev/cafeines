@@ -6,8 +6,8 @@ export const getAllProducts = async () => {
   };
 
 
-export const getProductsOfCategory = async () => {
-    let { data, error } = await supabase.from("productos").select("*").eq("categoria", "Cafés");
+export const getProductsOfCategory = async (categoria) => {
+    let { data, error } = await supabase.from("productos").select("*").eq("categoria", categoria);
     return { data, error };
 }
 

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { supabase } from "../lib/supaBase";
 import useSupabase from "../Hooks/useSupabase";
 import { getAlergias, getCategories, insertProduct } from "../api/supa-service";
 import { getToken } from "../utils/storage";

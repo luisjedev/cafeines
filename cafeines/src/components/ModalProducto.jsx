@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import ListaAlergias from './elements/ListaAlergias';
 
 
-const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
+const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
     
   Modal.setAppElement('#root');
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -63,17 +63,21 @@ const ModalProducto = ({mostrarModal, data, ocultarModal}) => {
       >
             <div className="w-full h-full flex flex-col justify-center items-center shadow-md">
                 <div className="w-full flex justify-center">
-                    <img src={data.url} className="w-full" />
+                  {data.url !== null && data.url !== "" ?
+                      <img src={data.url} className="w-full"/>
+                    :
+                      <img src={url_vacia} className="w-full"/>
+                  }
                 </div>
                 <h2 className="mt-2">{data.titulo}</h2>
                 <div className='w-[90%] h-auto'>
                     <p className="w-full h-full mb-2 p-2 text-amber-900">{data.descripcion}</p>
                 </div>
-                <div className="mb-5 flex justify-center items-center">
-                  <h2 className='text-2xl mr-2'>Alergias: </h2>
+                <div className="mb-5 flex justify-center items-center flex-col">
+                  <h2 className='text-2xl mb-2'>Alergias</h2>
                   {data.alergias ?
                     <div>
-                      <ListaAlergias data={data}/>
+                      <ListaAlergias alergias={data.alergias}/>
                     </div>
                   :
                     <p className='pt-1'>Ninguna</p>
