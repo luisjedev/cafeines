@@ -16,9 +16,20 @@ export const getCategories = async () => {
     return { data, error};
 }
 
+
 export const getAlergias = async () => {
     let { data, error } = await supabase.from("alergenos").select("*");
     return { data, error };
+}
+
+export const insertCategory = async (values) => {
+    const { error } = await supabase
+    .from("categorias")
+    .insert(values);
+
+    if(!error){
+        alert("Categoría añadida correctamente")
+    }
 }
 
 export const insertProduct = async (values) =>{

@@ -16,7 +16,7 @@ const SelectorProducto = ({data}) => {
                 <button onClick={onHandleClick} className="w-[100%] h-[auto] bg-white flex flex-col justify-around items-center pb-2 shadow-md">
                     <div className="w-[100%] h-[100%] flex justify-center items-center">
                         {data.url !== null && data.url !== "" ?
-                            <img src={data.url} className="w-[100%] h-[150px] min-w-[150px] min-h-[150px] max-w-[200px]"/>
+                            <img src={data.url} className="w-[100%] h-[150px] min-w-[120px] min-h-[120px] max-w-[200px]"/>
                         :
                             <img src={URL_IMAGEN_VACIA} className="w-[100%] h-[150px] min-w-[150px] min-h-[150px] max-w-[200px]"/>
                         }
@@ -25,7 +25,7 @@ const SelectorProducto = ({data}) => {
                     <div className="w-full h-auto flex justify-center">
                         <p className="p-2 text-sm truncate text-amber-900">{data.descripcion}</p>
                     </div>
-                    <h4 className="text-amber-900 fuente_principal_normal">{data.precio.toFixed(2)}</h4>
+                    <h4 className="text-amber-900 fuente_principal_normal">{data.precio.toFixed(2)} €</h4>
                 </button>
                 {abrirModal && <ModalProducto mostrarModal={abrirModal} data={data} ocultarModal={onHandleClick} url_vacia={URL_IMAGEN_VACIA}/>}
             </div>

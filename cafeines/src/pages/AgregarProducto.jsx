@@ -24,13 +24,9 @@ const AgregarProducto = () => {
     
     useEffect(() => {
         const token = getToken();
-
         if(!token){
             navigate('/login')
-        }else{
-            console.log("Estoy logueado");
         }
-        
     },[])
 
     const isDisabled = !nombre || !precio || !descripcion || !categoria;

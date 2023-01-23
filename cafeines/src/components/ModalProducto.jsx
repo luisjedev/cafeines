@@ -73,7 +73,7 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
                 <div className='w-[90%] h-auto'>
                     <p className="w-full h-full mb-2 p-2 text-amber-900">{data.descripcion}</p>
                 </div>
-                <div className="mb-5 flex justify-center items-center flex-col">
+                <div className="mb-3 flex justify-center items-center flex-col">
                   <h2 className='text-2xl mb-2'>Alergias</h2>
                   {data.alergias ?
                     <div>
@@ -83,7 +83,7 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
                     <p className='pt-1'>Libre de alergias comunes</p>
                   }
                 </div>
-                <h2 className="text-xl mb-5">{`${data.precio.toFixed(2)} €`}</h2>
+                <h2 className="text-xl mb-3">{`${data.precio.toFixed(2)} €`}</h2>
             </div>
       </Modal>
     </div>

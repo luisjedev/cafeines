@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import AgregarProducto from "./pages/AgregarProducto";
+import AgregarCategoria from "./pages/AgregarCategoria";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='*' element={<NotFound/>} />
           <Route path="/nuevo_producto" element={<AgregarProducto/>} />
+          <Route path="/nueva_categoria" element={<AgregarCategoria/>} />
           {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
       </div>
