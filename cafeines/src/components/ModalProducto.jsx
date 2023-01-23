@@ -69,7 +69,7 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
                       <img src={url_vacia} className="w-full"/>
                   }
                 </div>
-                <h2 className="mt-2">{data.titulo}</h2>
+                <h2 className="mt-2">{data.nombre}</h2>
                 <div className='w-[90%] h-auto'>
                     <p className="w-full h-full mb-2 p-2 text-amber-900">{data.descripcion}</p>
                 </div>
