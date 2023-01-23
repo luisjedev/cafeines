@@ -114,7 +114,7 @@ const AgregarProducto = () => {
                 >
                     <option value="seleccionar">--Seleccionar--</option>
                     {categoriasDisponibles.data?.map((categoria) => (
-                        <option key={categoria.id} value={categoria.name}>{categoria.name}</option>
+                        <option key={categoria.id} value={categoria.nombre}>{categoria.nombre}</option>
                     ))}
                 </select>
                 <h2 className="mb-2 text-2xl">Alergias</h2>
