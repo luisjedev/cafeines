@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import { getProductsOfCategory } from "../api/supa-service";
 import { useEffect, useState } from "react";
 
+
 const ListaProductos = () => {
     const {categoria} = useParams();
-    const [productos, setProductos] = useState([])
+    const [productos, setProductos] = useState(null)
 
     useEffect(() => {
         async function obtenerProductos(){
