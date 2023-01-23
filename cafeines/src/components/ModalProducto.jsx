@@ -80,7 +80,7 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
                       <ListaAlergias alergias={data.alergias}/>
                     </div>
                   :
-                    <p className='pt-1'>Ninguna</p>
+                    <p className='pt-1'>Libre de alergias comunes</p>
                   }
                 </div>
                 <h2 className="text-xl mb-5">{`${data.precio.toFixed(2)} €`}</h2>
