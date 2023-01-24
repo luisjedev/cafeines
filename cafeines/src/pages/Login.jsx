@@ -18,7 +18,7 @@ const Login = () => {
         password: password,
       })
       console.log(result)
-      navigate("/nuevo_producto");
+      navigate("/admin");
     } catch (error) {
       console.error(error)
     }

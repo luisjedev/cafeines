@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import AgregarProducto from "./pages/AgregarProducto";
 import AgregarCategoria from "./pages/AgregarCategoria";
+import Administracion from "./pages/Administracion";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='*' element={<NotFound/>} />
           <Route path="/nuevo_producto" element={<AgregarProducto/>} />
           <Route path="/nueva_categoria" element={<AgregarCategoria/>} />
+          <Route path="/admin" element={<Administracion/>} />
           {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
       </div>
