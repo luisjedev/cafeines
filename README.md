@@ -7,6 +7,6 @@ https://cafeines.vercel.app/
 
 Frontend -> React (JS, tailwindcss, MaterialUI, react-router-dom-v6, contextApi)
 
-Backend -> Supabase (SQL BBDD service) + Cloudinary (storage)
+Backend -> Supabase (SQL BBDD service && Auth) + Cloudinary (storage)
 
 Deploy -> Git + Vercel
