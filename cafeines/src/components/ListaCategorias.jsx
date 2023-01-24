@@ -1,19 +1,18 @@
 import SelectorCategoria from "./SelectorCategoria"
 import useSupabase from "../Hooks/useSupabase";
-import { getAllProducts } from "../api/supa-service";
+import { getCategories } from "../api/supa-service";
 
 const  ListaCategorias = () => {
 
-    const { loading, data, error } = useSupabase(getAllProducts);
-    console.log("Todos los productos:");
+    const {loading, data, error} = useSupabase(getCategories);
+    console.log("Todas las categorías:");
     console.log(data);
 
     return(
         <div className="grid grid-cols-1 w-full">
-        {/* {getCategorias(data).map((categoria) => (
-            <SelectorCategoria key={categoria.titulo} data={categoria}/>
-            ))
-        } */}
+        {data?.map((categoria) => (
+            <SelectorCategoria key={categoria.nombre} data={categoria}/>
+        ))} 
         </div>
     )
 }

@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { supabase } from "../lib/supaBase";
-
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -17,27 +18,28 @@ const Login = () => {
         password: password,
       })
       console.log(result)
+      navigate("/admin");
     } catch (error) {
       console.error(error)
     }
   }
 
   return(
-    <div>
+    <div className="w-full">
       <form onSubmit={handleSubmit} className="p-2 flex justify-center items-center flex-col">
-        <input className="border-stone-900 border-2 mb-2" 
+        <input className="border-amber-900 border-2 mb-2 p-1 text-center w-[80%]" 
           placeholder="Email.."
           type="email"
           name="email"
           onChange={e => setEmail(e.target.value)}
         />
-        <input className="border-stone-900 border-2 mb-2" 
+        <input className="border-amber-900 border-2 mb-2 p-1 text-center w-[80%]" 
           placeholder="Pass.."
           type="password"
           name="password"
           onChange={e => setPassword(e.target.value)}
         />
-        <button className="w-[50%] border-2 mt-2 border-amber-600">
+        <button className="h-10 w-24 text-white border-2 mt-2 border-amber-900 hover:bg-white hover:text-amber-900 bg-amber-900">
           Enviar
         </button>
       </form>
