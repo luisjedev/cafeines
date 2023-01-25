@@ -23,7 +23,6 @@ const useSupabase = (supaCall) => {
         }
         getData();
     },[])
-
     return {loading, data, error};
 }
 

@@ -4,8 +4,7 @@ import { Box, CircularProgress } from "@mui/material";
 
 const ListaAlergias = ({alergias}) => {
 
-    const {loading, data, error} = useSupabase(getAlergias);
-    console.log(data)
+    const {data} = useSupabase(getAlergias);
 
     return (
         <div className="flex justify-center items-center">
