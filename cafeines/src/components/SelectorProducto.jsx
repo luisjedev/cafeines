@@ -23,7 +23,7 @@ const SelectorProducto = ({data}) => {
                     </div>
                     <Titulo titulo={data.nombre}/> 
                     <div className="w-full h-auto flex justify-center">
-                        <p className="p-2 text-sm truncate text-amber-900">{data.descripcion}</p>
+                        <p className="pr-2 pl-2 text-sm truncate text-amber-900">{data.descripcion}</p>
                     </div>
                     <h4 className="text-amber-900 fuente_principal_normal">{data.precio.toFixed(2)} €</h4>
                 </button>

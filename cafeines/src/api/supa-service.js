@@ -44,7 +44,7 @@ export const insertProduct = async (values) =>{
 
 //PASAR ESTAS FUNCIONES A LLAMADAS ESPECÍFICAS
 
-  
+/*
     
 export const getListaProductos = (listaProductos) => {
     return listaProductos
@@ -81,3 +81,5 @@ export const getCategorias = (listaProductos) => {
     })
 
 }
+
+*/

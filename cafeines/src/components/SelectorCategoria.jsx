@@ -9,7 +9,7 @@ const SelectorCategoria = ({data}) =>{
                     <img src={data.url} className="w-[60px] rounded-full min-w-[60px] min-h-[55px] h-[55px]"/>
                 </div>
                 <div className="ml-1 w-[70%] flex justify-start">
-                <div className="w-full flex justify-center items-center mt-2 pl-2 pr-2">
+                <div className="w-full flex justify-start items-center mt-2 pl-2 pr-2">
                     <h2 className="text-2xl text-amber-900 text-center truncate">{data.nombre}</h2>
                 </div>
                 </div>

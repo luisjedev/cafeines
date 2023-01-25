@@ -10,8 +10,7 @@ import Administracion from "./pages/Administracion";
 function App() {
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-50">
-      <div className='w-[100%] h-[100%] bg-gray-50 p-5 flex justify-center items-center'>
+    <>
         <Routes>
           <Route path='/' element={<ListaCategorias/>}/>
           <Route path='/:categoria' element={<ListaProductos/>} />
@@ -22,8 +21,7 @@ function App() {
           <Route path="/admin" element={<Administracion/>} />
           {/* <Route path='/:categoria/:id' element={<FichaProducto/>}/> */}
         </Routes>
-      </div>
-    </div>
+    </>
   )
 }
 
