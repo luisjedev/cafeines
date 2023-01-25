@@ -17,11 +17,6 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
 
   },[mostrarModal])
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    //subtitle.style.color = '#f00';
-  }
-
   function closeModal() {
     setIsOpen(false);
     ocultarModal(false);
@@ -56,7 +51,6 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
     <div className='w-full'>
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"

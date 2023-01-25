@@ -12,7 +12,6 @@ const Administracion = () => {
         "login"
     ]
     
-
     useEffect(() => {
         const token = getToken();
         if(!token){

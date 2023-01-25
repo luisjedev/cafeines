@@ -6,9 +6,7 @@ import { insertCategory } from "../api/supa-service";
 const AgregarCategoria = () => {
     const [nombre, setNombre] = useState("");
     const [url, setUrl] = useState("");
-
     const navigate = useNavigate();
-
     const isDisabled = !nombre;
 
     useEffect(() => {
@@ -28,7 +26,6 @@ const AgregarCategoria = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         await insertCategory({
             nombre : nombre,
             url: url
@@ -36,7 +33,6 @@ const AgregarCategoria = () => {
 
         setNombre("");
         setUrl("");
-
     }
 
     return(

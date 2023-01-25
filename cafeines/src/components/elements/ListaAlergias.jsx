@@ -1,8 +1,7 @@
-import { getAlergias } from "../../utils/storage";
+import { getAlergiasFromStorage } from "../../utils/storage";
 
 const ListaAlergias = ({alergias}) => {
-    const data = getAlergias();
-
+    const data = getAlergiasFromStorage();
     return (
         <div className="flex justify-center items-center">
             {data?.map((alergia) => (

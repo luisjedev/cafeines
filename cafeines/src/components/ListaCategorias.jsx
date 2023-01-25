@@ -1,19 +1,15 @@
 import SelectorCategoria from "./SelectorCategoria"
 import useSupabase from "../Hooks/useSupabase";
-import { getCategories, getAlergias } from "../api/supa-service";
+import { getCategories} from "../api/supa-service";
 import { Alert } from "@mui/material";
 import { useEffect, useState } from "react";
-import { setAlergias } from "../utils/storage";
-
 
 const  ListaCategorias = () => {
     const [hayCategorias, setHayCategorias] = useState(true);
     const {data} = useSupabase(getCategories);
-    const alergias = useSupabase(getAlergias);
-
+    
     useEffect(() => {
           data && data.length < 1 && setHayCategorias(false);
-          alergias.data && setAlergias(alergias.data);
     },[data])
 
     return(

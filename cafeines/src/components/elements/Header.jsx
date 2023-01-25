@@ -1,7 +1,5 @@
 
 const Header = () => {
-
-
     return(
         <>
             <div className="w-full h-5rem flex justify-end items-center mt-2 pl-10 pr-10">

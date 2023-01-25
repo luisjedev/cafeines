@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
 const SelectorCategoria = ({data}) =>{
-
     return(
         <div className="w-[100%] h-auto flex justify-center items-center p-1">
             <Link to={`/${data.nombre}`} className="flex flex-row justify-center items-center w-[100%] h-[4.5rem] p-1 shadow-md bg-white">

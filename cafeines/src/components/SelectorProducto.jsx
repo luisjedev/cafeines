@@ -10,7 +10,6 @@ const SelectorProducto = ({data}) => {
         setAbrirModal(prev => !prev);
     }
 
-
     return(
             <div className="w-[100%] h-auto flex flex-col justify-center items-center p-1">
                 <button onClick={onHandleClick} className="w-[100%] h-[auto] bg-white flex flex-col justify-around items-center pb-2 shadow-md">
@@ -18,7 +17,7 @@ const SelectorProducto = ({data}) => {
                         {data.url !== null && data.url !== "" ?
                             <img src={data.url} className="w-[100%] h-[150px] min-w-[120px] min-h-[120px] max-w-[200px]"/>
                         :
-                            <img src={URL_IMAGEN_VACIA} className="w-[100%] h-[150px] min-w-[150px] min-h-[150px] max-w-[200px]"/>
+                            <img src={URL_IMAGEN_VACIA} className="w-[100%] h-[150px] min-w-[130px] min-h-[130px] max-w-[200px]"/>
                         }
                     </div>
                     <Titulo titulo={data.nombre}/> 

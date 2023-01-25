@@ -4,13 +4,10 @@ import useSupabase from "../Hooks/useSupabase";
 import { getAlergias, getCategories, insertProduct } from "../api/supa-service";
 import { getToken } from "../utils/storage";
 
-
 const AgregarProducto = () => {
     const navigate = useNavigate();
-
     const categoriasDisponibles = useSupabase(getCategories);
     const alergiasDisponibles = useSupabase(getAlergias);
-
     const [productForm, setProductForm] = useState({
         nombre: "",
         precio: 0,
@@ -31,10 +28,8 @@ const AgregarProducto = () => {
 
     const isDisabled = !nombre || !precio || !descripcion || !categoria;
 
-    
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
         await insertProduct(productForm);
 
         setProductForm({
@@ -67,7 +62,6 @@ const AgregarProducto = () => {
             }
         })
     }
-
 
     return(
         <div className="w-full text-center">

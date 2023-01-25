@@ -4,11 +4,10 @@ import { getProductsOfCategory } from "../api/supa-service";
 import { useEffect, useState } from "react";
 import { Alert } from "@mui/material";
 
-
 const ListaProductos = () => {
     const {categoria} = useParams();
-    const [productos, setProductos] = useState([])
-    const [hayProductos, setHayProductos] = useState(true)
+    const [productos, setProductos] = useState([]);
+    const [hayProductos, setHayProductos] = useState(true);
 
     useEffect(() => {
         async function obtenerProductos(){
