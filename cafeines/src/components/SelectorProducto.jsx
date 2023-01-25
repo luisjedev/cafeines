@@ -1,6 +1,6 @@
 import Titulo from './elements/Titulo'
 import { useState } from 'react';
-import ModalProducto from './ModalProducto';
+import ModalMaterialProducto from './ModalMaterialProducto';
 
 const SelectorProducto = ({data}) => {
     const [abrirModal, setAbrirModal] = useState(false);
@@ -26,7 +26,7 @@ const SelectorProducto = ({data}) => {
                     </div>
                     <h4 className="text-amber-900 fuente_principal_normal">{data.precio.toFixed(2)} €</h4>
                 </button>
-                {abrirModal && <ModalProducto mostrarModal={abrirModal} data={data} ocultarModal={onHandleClick} url_vacia={URL_IMAGEN_VACIA}/>}
+                <ModalMaterialProducto mostrarModal={abrirModal} ocultarModal={onHandleClick} url_vacia={URL_IMAGEN_VACIA} data={data}/>
             </div>
     )
 }

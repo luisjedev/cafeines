@@ -1,61 +1,48 @@
-import React, { useEffect } from 'react';
-import Modal from 'react-modal';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import { useEffect, useState } from 'react';
 import ListaAlergias from './elements/ListaAlergias';
 
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '89%',
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+};
 
-const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
-    
-  Modal.setAppElement('#root');
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+const ModalMaterialProducto = ({mostrarModal, ocultarModal, data, url_vacia}) => {
+  const [open, setOpen] = useState(false);
 
   useEffect(() =>{
     if(mostrarModal){
-        setIsOpen(true)
+        setOpen(true)
     }else{
-        setIsOpen(false)
+        setOpen(false)
     }
 
   },[mostrarModal])
 
-  function closeModal() {
-    setIsOpen(false);
-    ocultarModal(false);
-  }
-
-  const customStyles = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.75)"
-    },
-
-    content: {
-    
-      top: '40%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      border: '0',
-      width: '90%',
-      height: 'auto',  
-      padding: '0'
-    },
-  };
-
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={ocultarModal}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
       >
-            <div className="w-full h-full flex flex-col justify-center items-center shadow-md">
+        <Fade in={open}>
+          <Box sx={style}>
+          <div className="w-full h-full flex flex-col justify-center items-center shadow-md">
                 <div className="w-full flex justify-center">
                   {data.url !== null && data.url !== "" ?
                       <img src={data.url} className="w-full"/>
@@ -79,9 +66,11 @@ const ModalProducto = ({mostrarModal, data, ocultarModal, url_vacia}) => {
                 </div>
                 <h2 className="text-xl mb-3">{`${data.precio.toFixed(2)} €`}</h2>
             </div>
+          </Box>
+        </Fade>
       </Modal>
     </div>
   );
 }
 
-export default ModalProducto
+export default ModalMaterialProducto;

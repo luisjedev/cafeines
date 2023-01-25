@@ -29,7 +29,9 @@ const ListaProductos = () => {
                         ))}
                 </div>
             :
-                <Alert severity="error">Todavía no hay productos disponibles!</Alert>        
+                <div className="flex mt-10">
+                    <Alert severity="warning">¡Todavía no hay productos disponibles!</Alert>        
+                </div>
             }
         </>
     )
