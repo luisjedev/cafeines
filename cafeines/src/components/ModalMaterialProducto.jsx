@@ -4,6 +4,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { useEffect, useState } from 'react';
 import ListaAlergias from './elements/ListaAlergias';
+import { borderRadius } from '@mui/system';
 
 const style = {
   position: 'absolute',
@@ -12,7 +13,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '89%',
   bgcolor: 'background.paper',
-  boxShadow: 24,
+  borderRadius: '4px',
 };
 
 const ModalMaterialProducto = ({mostrarModal, ocultarModal, data, url_vacia}) => {
@@ -45,9 +46,9 @@ const ModalMaterialProducto = ({mostrarModal, ocultarModal, data, url_vacia}) =>
           <div className="w-full h-full flex flex-col justify-center items-center shadow-md">
                 <div className="w-full flex justify-center">
                   {data.url !== null && data.url !== "" ?
-                      <img src={data.url} className="w-full"/>
+                      <img src={data.url} className="w-full rounded"/>
                     :
-                      <img src={url_vacia} className="w-full"/>
+                      <img src={url_vacia} className="w-full rounded"/>
                   }
                 </div>
                 <h2 className="mt-2">{data.nombre}</h2>
