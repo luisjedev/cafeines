@@ -6,11 +6,11 @@ import useSupabase from "../Hooks/useSupabase";
 import { getAlergias } from "../api/supa-service";
 
 const Layout = ({Children}) => {
-    const alergias = useSupabase(getAlergias);
+    const {data} = useSupabase(getAlergias);
 
     useEffect(() => {
-        alergias.data && setAlergiasStorage(alergias.data);
-    },[alergias])
+        data && setAlergiasStorage(data);
+    },[data])
 
     return(
         <div className="flex flex-col justify-between h-screen">
