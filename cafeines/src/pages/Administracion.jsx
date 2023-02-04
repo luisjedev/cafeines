@@ -25,7 +25,7 @@ const Administracion = () => {
             {OPCIONES.map((opcion) => (
                 <Link key={opcion} to={`../${opcion}`}>
                     <div className="h-[5rem] bg-white p-1 shadow-md flex justify-center items-center m-1">
-                        <Titulo titulo={opcion.replace("_", " ")}/>
+                        <p className="text-sm">{opcion.replace("_", " ").toUpperCase()}</p>
                     </div>
                 </Link>
             ))}
