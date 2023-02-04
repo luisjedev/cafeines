@@ -4,7 +4,7 @@ import useSupabase from "../Hooks/useSupabase";
 import { getAlergias, getCategories, insertProduct } from "../api/supa-service";
 import { getToken } from "../utils/storage";
 
-const AgregarProducto = () => {
+const AgregarProducto = ({producto}) => {
     const navigate = useNavigate();
     const categoriasDisponibles = useSupabase(getCategories);
     const alergiasDisponibles = useSupabase(getAlergias);
@@ -15,7 +15,7 @@ const AgregarProducto = () => {
         categoria: "",
         url: "",
         alergias: []
-    })
+    });
 
     const { nombre, precio, descripcion, categoria, url} = productForm;
     
@@ -24,7 +24,18 @@ const AgregarProducto = () => {
         if(!token){
             navigate('/login')
         }
-    },[])
+
+        if(producto){
+            setProductForm({
+                nombre: producto.nombre,
+                precio: producto.precio,
+                descripcion: producto.descripcion,
+                categoria: producto.categoria,
+                url: producto.url,
+                alergias: producto.alergias
+            })
+        }
+    },[producto]);
 
     const isDisabled = !nombre || !precio || !descripcion || !categoria;
 

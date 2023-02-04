@@ -9,6 +9,7 @@ const Administracion = () => {
     const OPCIONES = [
         "nuevo_producto",
         "nueva_categoria",
+        "modificar_productos",
         "login"
     ]
     
@@ -22,8 +23,8 @@ const Administracion = () => {
     return(
         <div className="grid grid-cols-2 w-full">
             {OPCIONES.map((opcion) => (
-                <Link to={`../${opcion}`}>
-                    <div key={opcion} className="h-[5rem] bg-white p-1 shadow-md flex justify-center items-center m-1">
+                <Link key={opcion} to={`../${opcion}`}>
+                    <div className="h-[5rem] bg-white p-1 shadow-md flex justify-center items-center m-1">
                         <Titulo titulo={opcion.replace("_", " ")}/>
                     </div>
                 </Link>
